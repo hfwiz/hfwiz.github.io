@@ -1,11 +1,243 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>我的个人主页</title>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Emily Chen | Academic Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D3748',
+                        secondary: '#4A5568',
+                        accent: '#3182CE',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
 </head>
-<body>
-  <h1>Hello, 我是XXX！</h1>
-  <p>这是我的第一个GitHub Pages个人主页~</p>
+<body class="font-inter bg-gray-50 text-primary">
+    <!-- Header -->
+    <header class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg">
+                    <img src="https://p3-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/203762aa397b4f4b803a89d1cb8ce54f.png~tplv-a9rns2rl98-24:720:720.png?rcl=20251105110451C8CED5C6E08A44AD5DD7&rk3s=8e244e95&rrcfp=8a172a1a&x-expires=1762916691&x-signature=xzZI%2BN4tHDv7bCNP4x3aPRyjrvk%3D" 
+                         alt="Dr. Emily Chen" 
+                         class="w-full h-full object-cover">
+                </div>
+                
+                <div class="text-center md:text-left">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">Emily Chen, Ph.D.</h1>
+                    <h2 class="text-xl md:text-2xl text-secondary mb-6">Associate Professor of Artificial Intelligence</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mb-8 text-balance">
+                        Specializing in machine learning, natural language processing, and ethical AI development. 
+                        My research explores the intersection of artificial intelligence and social good.
+                    </p>
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="#contact" class="inline-flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-md hover:bg-opacity-90 transition-colors">
+                            <i class="fa fa-envelope"></i> Contact
+                        </a>
+                        <a href="#publications" class="inline-flex items-center gap-2 border border-primary text-primary px-5 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                            <i class="fa fa-file-text-o"></i> Publications
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 md:px-12 py-12">
+        <!-- About Section -->
+        <section class="max-w-4xl mx-auto mb-20">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 pb-2 border-b border-gray-200">About</h2>
+            <div class="prose lg:prose-lg max-w-none">
+                <p class="mb-4">
+                    I am an Associate Professor in the Department of Computer Science at Stanford University, where I lead the 
+                    <span class="font-medium">Responsible AI Research Lab</span>. My work focuses on developing 
+                    ethical artificial intelligence systems that are transparent, fair, and beneficial to society.
+                </p>
+                <p>
+                    Before joining Stanford, I was a Postdoctoral Fellow at MIT's Computer Science and Artificial Intelligence 
+                    Laboratory (CSAIL). I received my Ph.D. in Computer Science from Carnegie Mellon University in 2015.
+                </p>
+            </div>
+        </section>
+
+        <!-- Research Interests -->
+        <section class="max-w-4xl mx-auto mb-20">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 pb-2 border-b border-gray-200">Research Interests</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-accent text-2xl mb-3">
+                        <i class="fa fa-lightbulb-o"></i>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">Explainable AI</h3>
+                    <p class="text-gray-600 text-sm">
+                        Developing techniques to make AI decision-making processes more transparent and understandable.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-accent text-2xl mb-3">
+                        <i class="fa fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">AI Fairness</h3>
+                    <p class="text-gray-600 text-sm">
+                        Investigating algorithms to detect and mitigate biases in AI systems.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-accent text-2xl mb-3">
+                        <i class="fa fa-comments"></i>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">Context-Aware NLP</h3>
+                    <p class="text-gray-600 text-sm">
+                        Creating language models that better understand contextual nuances.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Publications -->
+        <section id="publications" class="max-w-4xl mx-auto mb-20">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 pb-2 border-b border-gray-200">Selected Publications</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-5 rounded-lg shadow-sm">
+                    <h3 class="font-medium mb-1">
+                        "Interpretable Neural Networks through Attention Mechanism Analysis"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-2">
+                        <span class="font-medium">Emily Chen</span>, Michael Rodriguez, Sarah Johnson, David Kim
+                    </p>
+                    <p class="text-xs text-gray-500">
+                        <em>Nature Machine Intelligence</em>, 2023
+                    </p>
+                </div>
+                
+                <div class="bg-white p-5 rounded-lg shadow-sm">
+                    <h3 class="font-medium mb-1">
+                        "Fairness-Aware Machine Learning in Healthcare: A Case Study"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-2">
+                        James Wilson, <span class="font-medium">Emily Chen</span>, Lisa Zhang
+                    </p>
+                    <p class="text-xs text-gray-500">
+                        <em>Proceedings of ICML</em>, 2020
+                    </p>
+                </div>
+                
+                <div class="bg-white p-5 rounded-lg shadow-sm">
+                    <h3 class="font-medium mb-1">
+                        "Contextual Understanding of Sarcasm in Social Media Text"
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-2">
+                        <span class="font-medium">Emily Chen</span>, Alex Thompson, Mei Lin
+                    </p>
+                    <p class="text-xs text-gray-500">
+                        <em>Annual Meeting of the ACL</em>, 2023
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="max-w-4xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 pb-2 border-b border-gray-200">Contact</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <div class="flex items-start gap-3 mb-4">
+                            <div class="text-accent mt-1">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-sm uppercase text-gray-500 mb-1">Office</h3>
+                                <p class="text-gray-600">
+                                    Department of Computer Science<br>
+                                    Stanford University<br>
+                                    Stanford, CA 94305
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-3 mb-4">
+                            <div class="text-accent mt-1">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-sm uppercase text-gray-500 mb-1">Email</h3>
+                                <p class="text-gray-600">
+                                    emily.chen@stanford.edu<br>
+                                    echen@cs.stanford.edu
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-3">
+                            <div class="text-accent mt-1">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-sm uppercase text-gray-500 mb-1">Phone</h3>
+                                <p class="text-gray-600">
+                                    +1 (650) 723-1234
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-center md:justify-end">
+                        <div class="flex gap-4">
+                            <a href="#" class="text-gray-500 hover:text-accent transition-colors">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-accent transition-colors">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-accent transition-colors">
+                                <i class="fa fa-github"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-accent transition-colors">
+                                <i class="fa fa-google"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8 mt-16">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center text-sm text-white/70">
+                <p>&copy; 2023 Dr. Emily Chen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
